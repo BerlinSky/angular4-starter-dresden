@@ -8,4 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class SingleFormComponent {
   constructor() { }
   ngOnInit() { }
+
+  onClick(value: string) {
+    console.log('clicked', value);
+  }
 }

@@ -1,1 +1,9 @@
+doctype html
+
 p Single Form
+
+div
+  //- input(#myInput type="text") Or (Both styles of syntax work)
+
+  input(ref-myInput type="text")
+  button((click)="onClick(myInput.value)") Click me!
