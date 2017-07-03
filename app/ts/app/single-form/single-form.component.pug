@@ -1,9 +1,10 @@
 doctype html
 
-p Single Form
+.formPanel
 
-div
+  h3 Single Form
+
   //- input(#myInput type="text") Or (Both styles of syntax work)
-
   input(ref-myInput type="text")
-  button((click)="onClick(myInput.value)") Click me!
+  
+  input(type="button", (click)="onClick(myInput.value)" value="Push Me").roundButton
