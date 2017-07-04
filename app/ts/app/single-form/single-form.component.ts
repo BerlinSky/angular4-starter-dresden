@@ -12,4 +12,8 @@ export class SingleFormComponent {
   onClick(value: string) {
     console.log('clicked', value);
   }
+
+  onMouseOver(value: string) {
+    console.log('mouse over', value);
+  }
 }

@@ -7,4 +7,4 @@ doctype html
   //- input(#myInput type="text") Or (Both styles of syntax work)
   input(ref-myInput type="text")
   
-  input(type="button", (click)="onClick(myInput.value)" value="Push Me").roundButton
+  input(type="button", (click)="onClick(myInput.value)", (mouseover)="onMouseOver(myInput.value)", value="Push Me").roundButton
