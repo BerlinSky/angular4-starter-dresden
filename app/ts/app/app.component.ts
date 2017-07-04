@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { MessagingService } from './service/messaging.service';
+
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.pug',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular4 Dresden';
+
+  constructor(private Messaging: MessagingService) {}
  }

@@ -4,6 +4,8 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { SingleFormComponent } from './single-form/single-form.component';
 
+import { MessagingService } from './service/messaging.service';
+
 @NgModule({
   imports: [
     BrowserModule
@@ -12,6 +14,7 @@ import { SingleFormComponent } from './single-form/single-form.component';
     AppComponent,
     SingleFormComponent
   ],
+  providers: [MessagingService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
