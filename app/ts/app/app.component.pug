@@ -6,14 +6,8 @@ main
   img(src="../../images/color-palette.png")   
 
   .formContainer
-    app-single-form
+    app-single-form(*ngFor="let message of Messaging.messageList" '[message]'="message") 
 
   .messageContainer
-    //- p. 
-    //-   {{ Messaging.message }}
     p.
       {{ jsonService }}
-
-    ul
-      li(*ngFor="let message of Messaging.messageList") 
-        | {{ message }}
