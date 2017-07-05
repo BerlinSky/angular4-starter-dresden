@@ -14,7 +14,11 @@ import { MessagingService } from './service/messaging.service';
     AppComponent,
     SingleFormComponent
   ],
-  providers: [MessagingService],
+  // providers: [MessagingService],
+  providers: [
+      { provide: 'Messaging', useClass: MessagingService },
+      { provide: 'jsonService', 'useValue': 'http://localhost:4000/' }
+    ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

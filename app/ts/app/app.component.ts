@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 
-import { MessagingService } from './service/messaging.service';
+// import { MessagingService } from './service/messaging.service';
 
 @Component({
   selector: 'my-app',
@@ -10,5 +10,9 @@ import { MessagingService } from './service/messaging.service';
 export class AppComponent {
   title = 'Angular4 Dresden';
 
-  constructor(private Messaging: MessagingService) {}
+  // constructor(private Messaging: MessagingService) {}
+  constructor(
+    @Inject('Messaging') private Messaging: string,
+    @Inject('jsonService') private jsonService: any,
+  ){}
  }
