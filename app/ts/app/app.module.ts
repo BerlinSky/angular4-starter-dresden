@@ -3,12 +3,14 @@ import { BrowserModule }  from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { SingleFormComponent } from './single-form/single-form.component';
+import { FormsModule } from '@angular/forms';
 
 import { MessagingService } from './service/messaging.service';
 
 @NgModule({
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   declarations: [
     AppComponent,
