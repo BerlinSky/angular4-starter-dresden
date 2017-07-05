@@ -12,7 +12,7 @@ export class AppComponent {
 
   // constructor(private Messaging: MessagingService) {}
   constructor(
-    @Inject('Messaging') private Messaging: string,
+    @Inject('Messaging') private Messaging: any,
     @Inject('jsonService') private jsonService: any,
   ){}
  }

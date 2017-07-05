@@ -9,7 +9,11 @@ main
     app-single-form
 
   .messageContainer
-    p. 
-      {{ Messaging.message }}
+    //- p. 
+    //-   {{ Messaging.message }}
     p.
       {{ jsonService }}
+
+    ul
+      li(*ngFor="let message of Messaging.messageList") 
+        | {{ message }}
