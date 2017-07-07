@@ -3,10 +3,11 @@ doctype html
 .formPanel
 
   h3 Single Form
-  | {{ message }}
+  //- | {{ message }}
   //- input(#myInput type="text") Or (Both styles of syntax work)
-  input(ref-myInput type="text" '[(ngModel)]'="message")
+  input(ref-myInput type="text" '[(ngModel)]'="content")
   
-  input(type="button", (click)="onClick(myInput.value)", (mouseover)="onMouseOver(myInput.value)", value="Push Me").roundButton
+  //- input(type="button", (click)="onClick(myInput.value)", (mouseover)="onMouseOver(myInput.value)", value="Push Me").roundButton
+  input(type="button", (click)="update.emit({content:content})", value="Push Me").roundButton
 
   

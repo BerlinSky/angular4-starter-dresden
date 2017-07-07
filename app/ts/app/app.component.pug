@@ -5,8 +5,12 @@ main
 
   img(src="../../images/color-palette.png")   
 
+  ul
+    li(*ngFor="let message of Messaging.messageList")
+      | {{message.content}}
+
   .formContainer
-    app-single-form(*ngFor="let message of Messaging.messageList" '[message]'="message") 
+    app-single-form(*ngFor="let message of Messaging.messageList" '[content]'="message.content" '(update)'="onUpdate(message.id, $event.content)") 
 
   .messageContainer
     p.

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-single-form',
@@ -6,11 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./single-form.component.scss']
 })
 export class SingleFormComponent  implements OnInit {
-  @Input() message: string;
-
-  onClick(value: string) {
-    console.log('clicked', value);
-  }
+  @Input() content: string;
+  @Output() update = new EventEmitter();
+  // onClick(value: string) {
+  //   console.log('clicked', value);
+  // }
 
   onMouseOver(value: string) {
     console.log('mouse over', value);

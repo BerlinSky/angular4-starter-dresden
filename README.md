@@ -1,6 +1,6 @@
 ## Angular4 with Webpack 2
 
 ### Steps:
-1. Import FormsModule in app.module.ts: two steps
-2. Update the inputs to use the "banana in a box" syntax.
+1. Add @Output()
+2. Add EventEmitter()
 
